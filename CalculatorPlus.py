@@ -10,6 +10,8 @@ class Calculator:
         return a * b
 
     def divide(self, a, b):
+        if b == 0:
+             raise ValueError("Cannot divide by zero.")
         return a / b
 
     # TODO: Implement the following function to calculate the square root of a number.
