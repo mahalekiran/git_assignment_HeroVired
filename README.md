@@ -27,3 +27,22 @@ git switch feature/sqrt
 16. Ceate pull request. Add Reviewer. ask them to review. Merge feature branch to dev branch.
 17. Testing on dev branch after puling the code.
 18. Merge dev to main branch. and make a release 2.
+
+
+Q2. Git LFS
+1. Create a branch lfs using 
+git banch lfs
+git switch lfs
+2. Add large file. zip file here
+3. install git lfs
+git lfs install
+4. track lfs
+git lfs track "*.zip"
+git lfs track "*.iso"
+5. Add commit push large files
+git add .\bluetooth_applications-22.zip
+git commit -m "Add files using Git LFS"
+git push origin lfs
+6. On Second Machine, cloned the project. 
+git switch lfs
+git lfs pull
