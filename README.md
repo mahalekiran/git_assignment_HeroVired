@@ -24,7 +24,7 @@ git switch feature/sqrt
 13. Modify divide function by adding fix. commt and push code on dev. 
 14. switch to main branch.merge dev changes for bug fixation.
 15. again come to feature branch and work on it. push the code.
-16. Ceate pull request. Add Reviewer. ask them to review. Merge feature branch to dev branch.
+16. Create pull request. Add Reviewer. ask them to review. Merge feature branch to dev branch.
 17. Testing on dev branch after puling the code.
 18. Merge dev to main branch. and make a release 2.
 
