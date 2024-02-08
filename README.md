@@ -46,3 +46,44 @@ git push origin lfs
 6. On Second Machine, cloned the project. 
 git switch lfs
 git lfs pull
+
+Q3. Stash usage
+1. First created geometry-calculator branch and added the code
+git checkout -b geometry-calculator
+add python file GeometryCalculator.py and write the code
+2. Commit the code in this branch
+ git commit -m "Created file with Geo calculator code"
+3. Create a new branch named "feature/circle-area" to work on the circle area feature
+git checkout -b feature/circle-area
+python .\GeometryCalculator.py 
+4. Stash Changes for Circle Area Feature and Verify working directory
+git stash save "Circle Area Feture Implementation"
+git status
+5. Create a New Branch for Rectangle Area Feature:
+git checkout -b feature/rectangle-area
+python .\GeometryCalculator.py
+6. Stash Changes for Rectangle Area Feature and verify working directory
+git stash save "RectangleArea Feature Implementation"
+git status
+7. Switch Back to Circle Area Branch:
+git checkout feature/circle-area
+8. Retrieve stashed changes
+git stash list
+git stash apply stash@{1}
+9. make implementation and commit and push changes to this feature: circle
+git add GeometryCalculator.py
+git commit m "Completed Circle feature"
+git push origin feature/circle-area
+10.  Switch Back to Rectangle Area Branch:
+git checkout feature/rectangle-area
+11. Retrieve stashed changes
+git stash list
+git stash apply stash@{0}
+12. make implementation and commit and push changes to this feature: rectangle
+git add GeometryCalculator.py 
+git commit -m "Completed Rectangle feature"
+git push origin feature/rectangle-area
+13. Created Pull Requests for both features to dev branch.
+Added reviewer Prem Kumar.
+After approval. Merged the code to dev branch.
+14. Created another pull request to merge code from dev to main branch without reviewer.
